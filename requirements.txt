@@ -1,0 +1,13 @@
+#app
+uvicorn
+pydantic
+pydantic-settings
+fastapi
+SQLAlchemy
+python-dotenv
+pyinstaller
+
+#tests
+pytest
+pytest-mock
+httpx
