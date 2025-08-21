@@ -39,8 +39,8 @@ server/
 1. Клонировать репозиторий:
 
    ```bash
-   git clone https://github.com/RitinaADM/yar_mast_server.git
-   cd yar_mast_server
+   git clone https://github.com/RitinaADM/mast_yar_server.git
+   cd mast_yar_server
    ```
 
 2. Установить зависимости:
