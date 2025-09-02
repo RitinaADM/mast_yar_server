@@ -19,7 +19,7 @@ def test_save_and_get(adapter: DbAdapter):
 
 def test_pagination(adapter: DbAdapter):
     for i in range(15):
-        adapter.save(Record(text=f"test{i}", date="date", time="time", click_number=i))
+        adapter.save(Record(text=f"test{i}", date="2025-08-20", time="12:00:00", click_number=i))
     records_page1, total1 = adapter.get_all(1, 10)
     assert len(records_page1) == 10
     assert total1 == 15
@@ -30,8 +30,8 @@ def test_pagination(adapter: DbAdapter):
 def test_exception_rollback(mocker, adapter: DbAdapter):
     mock_session = mocker.patch('sqlalchemy.orm.session.Session.add')
     mock_session.side_effect = Exception("DB error")
-    with pytest.raises(DatabaseError, match="Failed to save record: DB error"):
-        adapter.save(Record(text="test", date="date", time="time", click_number=0))
+    with pytest.raises(DatabaseError, match="Ошибка сохранения записи: DB error"):
+        adapter.save(Record(text="test", date="2025-08-20", time="12:00:00", click_number=0))
 
 def test_empty_database(adapter: DbAdapter):
     records, total = adapter.get_all(1, 10)

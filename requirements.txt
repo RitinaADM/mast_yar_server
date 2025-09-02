@@ -1,13 +1,13 @@
 #app
-uvicorn
-pydantic
-pydantic-settings
-fastapi
-SQLAlchemy
-python-dotenv
-pyinstaller
+uvicorn==0.23.2
+pydantic==2.5.0
+pydantic-settings==2.1.0
+fastapi==0.104.1
+SQLAlchemy==2.0.23
+python-dotenv==1.0.0
+pyinstaller==6.2.0
 
 #tests
-pytest
-pytest-mock
-httpx
+pytest==7.4.3
+pytest-mock==3.12.0
+httpx==0.25.2

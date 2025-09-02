@@ -19,3 +19,21 @@ venv/
 # IDE
 .idea/
 .vscode/
+
+# PyInstaller
+build/
+dist/
+spec/
+# PyInstaller cache
+__pyinstaller/
+
+# Coverage
+.coverage
+.coverage.*
+.coverage.*.xml
+.coverage.*.html
+.coverage.*.json
+.coverage.*.lcov
+.coverage.*.lcov.info
+.coverage.*.lcov.html
+.coverage

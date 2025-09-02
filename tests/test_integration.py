@@ -16,8 +16,8 @@ def client(tmp_path):
 def test_post_and_get_integration(client: TestClient):
     # Отправляем POST
     response = client.post("/records", json={"text": "test", "date": "2025-08-20", "time": "12:00:00", "click_number": 0})
-    assert response.status_code == 200
-    assert response.json() == {"status": "success"}
+    assert response.status_code == 201
+    assert response.json() == {"status": "success", "message": "Запись успешно создана"}
 
     # Проверяем GET
     response = client.get("/records?page=1&limit=10")
